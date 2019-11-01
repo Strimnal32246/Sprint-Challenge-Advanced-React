@@ -2,7 +2,7 @@ import React from "react";
 import PlayerCard from "./PlayerCard";
 import axios from "axios";
 
-class PlayerList extends React.Component {
+class Player extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -35,3 +35,4 @@ class PlayerList extends React.Component {
     );
   }
 }
+export default Player;
