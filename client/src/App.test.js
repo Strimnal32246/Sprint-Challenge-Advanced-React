@@ -7,12 +7,11 @@ import Playerlist from "./components/PlayerCard";
 import Navbar from "./components/Navbar.js";
 import PlayerCard from "./components/PlayerCard";
 
-// afterEach(rtl.cleanup);
-// it("renders without crashing", () => {
-// const div = document.createElement("div");
-// ReactDOM.render(<App />, div);
-// ReactDOM.unmountComponentAtNode(div);
-// });
+it("renders without crashing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(<App />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
 
 test("Players Exist", async () => {
   const { findByText } = await render(<Players />);
@@ -25,8 +24,7 @@ test("This should verify that Women's World Cup renders in the navbar", () => {
   getByText(/world/i);
 });
 
- test("Should have text (player name)", async () => {
-    const { findByText } = await render(<PlayerCard />);
-      findByText(/alex morgan/i);
-    findByText(/abby dahlkemper/i);
-  });
+test("Should have text (player name)", async () => {
+  const { findByText } = await render(<Players />);
+  findByText(/alex morgan/i);
+});
